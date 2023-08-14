@@ -6,5 +6,8 @@
 --   command = "tabdo wincmd =",
 -- })
 local opt = vim.opt
+
 opt.clipboard = ""
+opt.whichwrap = ""
+opt.undofile = false
 

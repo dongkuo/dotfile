@@ -9,6 +9,8 @@ M.override = {
   Comment = {
     italic = true,
   },
+
+  TelescopeSelection = { bg = "#555555", fg = "#FFFFFF"},
 }
 
 ---@type HLTable
