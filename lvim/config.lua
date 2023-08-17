@@ -5,6 +5,7 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
 vim.opt.clipboard = ''
+vim.opt.whichwrap = ''
 
 lvim.colorscheme = "codemonkey"
 
@@ -44,6 +45,8 @@ lvim.keys.normal_mode["<S-CR>"] = "<Esc>o"
 lvim.keys.visual_mode["<C-c>"] = '"+y'
 lvim.keys.visual_mode["<C-v>"] = 'x"+gP'
 lvim.keys.visual_mode["<C-f>"] = '<Esc>/\\%V'
+
+lvim.keys.command_mode["<C-v>"] = "<C-R>+"
 
 -- lsp bindings
 lvim.lsp.buffer_mappings.insert_mode["<A-\\>"] = { vim.lsp.buf.signature_help, "Show signature" }
