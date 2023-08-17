@@ -94,14 +94,14 @@ M.telescope = {
 		},
 	},
 
-	extensions = {
-		["ui-select"] = {
-			require("telescope.themes").get_dropdown({
-			}),
-		},
-	},
+	-- extensions = {
+	-- 	["ui-select"] = {
+	-- 		require("telescope.themes").get_dropdown({
+	-- 		}),
+	-- 	},
+	-- },
 
-  extensions_list = { "themes", "terms", "ui-select"},
+  -- extensions_list = { "themes", "terms", "ui-select"},
 }
 
 return M

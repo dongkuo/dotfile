@@ -57,9 +57,9 @@ local plugins = {
     opts = overrides.telescope,
   },
 
-  {
-    "nvim-telescope/telescope-ui-select.nvim"
-  }
+  -- {
+  --   "nvim-telescope/telescope-ui-select.nvim"
+  -- }
 
   -- To make a plugin not be loaded
   -- {
