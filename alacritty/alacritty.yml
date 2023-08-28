@@ -10,7 +10,7 @@ colors:
 
   selection:
     text: CellForeground
-    background: '#333333'
+    background: '#555555'
 
   # Normal colors
   normal:
@@ -71,7 +71,7 @@ window:
   padding:
     x: 8
     y: 0
-  dynamic_padding: false
+  dynamic_padding: true
   decorations: buttonless
   dimensions:
     columns: 106
@@ -101,6 +101,7 @@ key_bindings:
   - { key: R, mods: Command, mode: ~Vi|~Search, action: ClearHistory }
   - { key: W, mods: Command, action: Hide }
   - { key: W, mods: Command|Shift, action: Quit }
+  - { key: V, mods: Command|Shift, action: ToggleViMode }
   - { key: N, mods: Command, action: SpawnNewInstance }
   - { key: T, mods: Command, action: CreateNewWindow }
   - { key: Left, mods: Alt, chars: "\x1bb" } # Skip word left
