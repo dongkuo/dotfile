@@ -15,6 +15,7 @@ lvim.autocommands = {
     {
       pattern = "*",
       callback = function()
+        vim.api.nvim_set_hl(0, "Normal", { bg = "#252525" })
         vim.api.nvim_set_hl(0, "Comment", { fg = "#686868", italic = true })
       end,
     },
