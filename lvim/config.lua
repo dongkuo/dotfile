@@ -4,7 +4,21 @@
 -- Forum: https://www.reddit.com/r/lunarvim/
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
-vim.opt.clipboard = ''
+if vim.fn.has("wsl") == 1 then
+  vim.g.clipboard = {
+    name = 'win32yank-wsl',
+    copy = {
+      ['+'] = 'win32yank -i --crlf',
+      ['*'] = 'win32yank -i --crlf',
+    },
+    paste = {
+      ['+'] = 'win32yank -o --lf',
+      ['*'] = 'win32yank -o --lf',
+    },
+    cache_enabled = true,
+  }
+end
+
 vim.opt.whichwrap = ''
 
 lvim.colorscheme = "codemonkey"
@@ -42,6 +56,7 @@ lvim.keys.normal_mode["<C-z>"] = "<cmd> undo <CR>"
 lvim.keys.normal_mode["<C-r>"] = "<cmd> redo <CR>"
 lvim.keys.normal_mode["<C-y>"] = "<cmd> redo <CR>"
 lvim.keys.normal_mode["<S-CR>"] = "<Esc>o"
+lvim.keys.normal_mode["<C-q>"] = false
 
 lvim.keys.visual_mode["<C-c>"] = '"+y'
 lvim.keys.visual_mode["<C-v>"] = 'x"+gP'
